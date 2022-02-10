@@ -6,7 +6,12 @@ set tabstop=2
 set history=1000
 set shiftwidth=2
 set nocompatible
+set clipboard=unnamedplus
+set hidden
 filetype off
+
+nnoremap <silent> <C-f> :Files<CR> 
+nnoremap <silent> <C-b> :Buffers<CR> 
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -23,7 +28,11 @@ Plugin 'vim-syntastic/syntastic'
 "let g:syntastic_python_python_exec = 'python3'
 "let g:syntastic_python_checkers = ['python']
 Plugin 'ervandew/supertab'
-
+Plugin 'junegunn/fzf.vim'
+Plugin 'junegunn/fzf'
+let g:fzf_layout = { 'down': '~25%' }
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 
 
