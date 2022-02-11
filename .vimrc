@@ -1,5 +1,5 @@
 syntax on
-
+ 
 " turn hybrid line numbers on
 set number relativenumber 
 set tabstop=2
@@ -8,8 +8,9 @@ set shiftwidth=2
 set nocompatible
 set clipboard=unnamedplus
 set hidden
-filetype off
+set encoding=UTF-8
 
+filetype off
 nnoremap <silent> <C-f> :Files<CR> 
 nnoremap <silent> <C-b> :Buffers<CR> 
 
@@ -33,8 +34,13 @@ Plugin 'junegunn/fzf'
 let g:fzf_layout = { 'down': '~25%' }
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'morhetz/gruvbox'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'mattn/emmet-vim'
 call vundle#end()
 
+"autocmd vimenter * ++nested colorscheme gruvbox
+"set background=dark    " Setting dark mode
 
 filetype plugin indent on
 
