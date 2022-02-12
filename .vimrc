@@ -26,8 +26,8 @@ Plugin 'ycm-core/YouCompleteMe'
 Plugin 'tmsvg/pear-tree'
 Plugin 'preservim/nerdtree'
 Plugin 'vim-syntastic/syntastic'
-"let g:syntastic_python_python_exec = 'python3'
-"let g:syntastic_python_checkers = ['python']
+let g:syntastic_python_python_exec = 'python3'
+let g:syntastic_python_checkers = ['python']
 Plugin 'ervandew/supertab'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf'
