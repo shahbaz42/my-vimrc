@@ -55,7 +55,6 @@ autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -64,3 +63,6 @@ let g:syntastic_check_on_wq = 0
 " Python compile upon pressing F2
 autocmd FileType python map <buffer> <F2> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F2> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
+autocmd FileType c map <buffer> <F2> :w<CR>:exec '!gcc' shellescape(@%,1) '&& clear && ./a.out'<CR>
+autocmd FileType c imap <buffer> <F2> <esc>:w<CR>:exec '!gcc' shellescape(@%,1) '&& clear && ./a.out'<CR>
